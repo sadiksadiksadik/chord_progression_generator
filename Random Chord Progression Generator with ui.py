@@ -7,7 +7,7 @@ from tkinter import *
 def random_major_progression():
     
     # selects a random number of chords/items from the Ionian and assigns string to variable major_progression
-    kinputvar = random.randint(2, 6)
+    kinputvar = random.randint(2, 8)
     Ionian = ("I", "ii", "iii", "IV", "V", "vi", "viio")
     major_progression = random.choices(Ionian, k=int(kinputvar))
     
@@ -27,7 +27,7 @@ def random_major_progression():
 def random_harmonic_minor_progression():
     
     # selects a random number of chords/items from the Ionian and assigns string to variable major_progression
-    kinputvar = random.randint(2, 6)
+    kinputvar = random.randint(2, 8)
     harmonic_minor = ("i", "iio", "bIII+", "iv", "V", "bVI", "viio")
     harmonic_minor_progression = random.choices(harmonic_minor, k=int(kinputvar))
     
@@ -46,7 +46,7 @@ def random_harmonic_minor_progression():
 def random_melodic_minor_progression():
     
     # selects a random number of chords/items from the Ionian and assigns string to variable major_progression
-    kinputvar = random.randint(2, 6)
+    kinputvar = random.randint(2, 8)
     melodic_minor = ("i", "ii", "bIII+", "IV", "V", "vio", "viio")
     melodic_minor_progression = random.choices(melodic_minor, k=int(kinputvar))
     
@@ -81,15 +81,17 @@ def pick_a_func_button_progression():
 # The Function that Retreives a String from dropdown list and displays the notes of the selected Mode         
 def pick_a_func_button_scale():
     
+    
+    
     Ionian = ("I", "ii", "iii", "IV", "V", "vi", "viio")
     harmonic_minor = ("i", "iio", "bIII+", "iv", "V", "bVI", "viio")
     melodic_minor = ("i", "ii", "bIII+", "IV", "V", "vio", "viio")
 
 # Retreives Current String Selected on the Dropdown List
-    selection=drop_title1.get()
+    scale=drop_title1.get()
 
 # Print Scale Loop    
-    if selection == "Major":
+    if scale == "Major":
         # Inserts Major Scale into text box
         progressionbox.config(state='normal')
         progressionbox.delete('1.0', 'end')

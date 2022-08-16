@@ -1,6 +1,6 @@
 # Chord Progression Generator
 
-A tool designed to assist in the music compositional, and improvisational process. 
+A tool designed to assist in the music compositional, and improvisational process.
 
 ## What does this tool do?
 This tool creates random, but musically sound progressions based on Western Harmony.

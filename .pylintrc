@@ -1,5 +1,6 @@
 [MASTER]
 disable=
+    C0111, # missing-docstring
     C0114, # missing-module-docstring
     C0116, # missing-function-docstring
 

@@ -117,60 +117,65 @@ def pick_a_func_button_scale():
         progressionbox.config(state="disabled")
 
 
-# Init display window
-root = tk.Tk()
-root.title("Chord Progression Generator")
-root.geometry("600x450")
-root.configure(bg="#000000")
+def main():
+    # Init display window
+    root = tk.Tk()
+    root.title("Chord Progression Generator")
+    root.geometry("600x450")
+    root.configure(bg="#000000")
 
-# Text Box
-progressionbox = tk.Text(root, spacing1=50, height=2, width=180)
-progressionbox.config(bg="#000000")
-progressionbox.config(fg="#FFFFF0")
-progressionbox.config(font=("Terminal", 18, "bold"))
-progressionbox.pack()
+    # Text Box
+    progressionbox = tk.Text(root, spacing1=50, height=2, width=180)
+    progressionbox.config(bg="#000000")
+    progressionbox.config(fg="#FFFFF0")
+    progressionbox.config(font=("Terminal", 18, "bold"))
+    progressionbox.pack()
 
-# option menu
-menu_options = ["Major", "Minor", "Melodic", "Ionian_in_thirds"]
-variable1 = tk.StringVar()
-scale_menu = tk.StringVar(root)
-# sets initial name for widget
-scale_menu.set("Please Choose a Mode")
-dropdownmenu1 = tk.OptionMenu(root, scale_menu, *menu_options)
-dropdownmenu1.config(bg="#000000")
-dropdownmenu1.config(fg="#FFFFF0")
-dropdownmenu1.config(height=1, width=140)
-dropdownmenu1.config(font=("Terminal"))
-dropdownmenu1.pack()
-dropdownmenu1.config(activebackground="#FFFFF0")
+    # option menu
+    menu_options = ["Major", "Minor", "Melodic", "Ionian_in_thirds"]
+    variable1 = tk.StringVar()
+    scale_menu = tk.StringVar(root)
+    # sets initial name for widget
+    scale_menu.set("Please Choose a Mode")
+    dropdownmenu1 = tk.OptionMenu(root, scale_menu, *menu_options)
+    dropdownmenu1.config(bg="#000000")
+    dropdownmenu1.config(fg="#FFFFF0")
+    dropdownmenu1.config(height=1, width=140)
+    dropdownmenu1.config(font=("Terminal"))
+    dropdownmenu1.pack()
+    dropdownmenu1.config(activebackground="#FFFFF0")
 
-# Random Chord Progression Generator Button
-thebutton = tk.Button(
-    root,
-    height=5,
-    width=180,
-    text="Generate Chord Progression",
-    font=("Terminal", 18, "bold"),
-    command=pick_a_func_button_progression,
-)
-thebutton.pack(side=tk.TOP)
-thebutton.configure(bg="#000000")
-thebutton.configure(fg="#FFFFF0")
-thebutton.config(activebackground="#FFFFF0")
+    # Random Chord Progression Generator Button
+    thebutton = tk.Button(
+        root,
+        height=5,
+        width=180,
+        text="Generate Chord Progression",
+        font=("Terminal", 18, "bold"),
+        command=pick_a_func_button_progression,
+    )
+    thebutton.pack(side=tk.TOP)
+    thebutton.configure(bg="#000000")
+    thebutton.configure(fg="#FFFFF0")
+    thebutton.config(activebackground="#FFFFF0")
 
-# Display Notes of Selected Mode Button
-thebutton = tk.Button(
-    root,
-    height=5,
-    width=180,
-    text="Generate Notes of Scale",
-    font=("Terminal", 18, "bold"),
-    command=pick_a_func_button_scale,
-)
-thebutton.pack(side=tk.TOP)
-thebutton.configure(bg="#000000")
-thebutton.configure(fg="#FFFFF0")
-thebutton.config(activebackground="#FFFFF0")
+    # Display Notes of Selected Mode Button
+    thebutton = tk.Button(
+        root,
+        height=5,
+        width=180,
+        text="Generate Notes of Scale",
+        font=("Terminal", 18, "bold"),
+        command=pick_a_func_button_scale,
+    )
+    thebutton.pack(side=tk.TOP)
+    thebutton.configure(bg="#000000")
+    thebutton.configure(fg="#FFFFF0")
+    thebutton.config(activebackground="#FFFFF0")
 
-# Keep display window running
-root.mainloop()
+    # Keep display window running
+    root.mainloop()
+
+
+if __name__ == "__main__":
+    main()
